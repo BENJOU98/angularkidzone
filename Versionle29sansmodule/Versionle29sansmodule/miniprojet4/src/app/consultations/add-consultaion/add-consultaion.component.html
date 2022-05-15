@@ -1,0 +1,132 @@
+
+<div class="row">
+  <div class="grid-margin stretch-card">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">Form Validation</h4>
+        <form (ngSubmit)="onSubmit()"  id="signupForm">
+          <!-- (ngSubmit)="onSubmit()" -->
+<!-- Default dropright button -->
+<div class="form-group">
+  <label for="enfant">Enfant</label>
+  <select [(ngModel)]="consultation.enfant" class="form-control" name="enfant">
+    <option selected [ngValue]="undefined">Choisir...</option>
+    <option *ngFor="let enfant of enfants" [ngValue]="enfant">{{enfant.nom}}&nbsp;{{enfant.prenom}}</option>
+  </select>
+</div>
+
+                    <div class="mb-3">
+            <label for="name" class="form-label">Description de la consultation</label>
+            <!-- <input  id="description" class="form-control" name="description" type="textarea"> -->
+            <textarea [(ngModel)]="consultation.description" id="description" name="description" class="form-control" rows="3"></textarea>
+          </div>
+
+
+          <div class="mb-3">
+            <label for="name" class="form-label">Date de la consultation</label>
+            <input [(ngModel)]="consultation.dateconsultation" id="dateconsultation" class="form-control" name="dateconsultation" type="date">
+          </div>
+
+          <div class="mb-3">
+            <label for="name" class="form-label">Prix de la consultation</label>
+            <input [(ngModel)]="consultation.prix" id="prix" class="form-control" name="prix" type="number">
+          </div>
+          <div class="mb-3">
+            <label for="name" class="form-label">Maladie de l'enfant</label>
+            <input [(ngModel)]="consultation.maladie" id="maladie" class="form-control" name="maladie" type="text">
+          </div>
+
+          <!-- Default dropright button -->
+<div class="form-group">
+  <label>Type de la consultation</label>
+  <select [(ngModel)]="consultation.typecons" class="form-control" name="typecons">
+    <option>Choisir...</option>
+    <option>Vaccin</option>
+    <option>Rappel</option>
+  </select>
+</div>
+
+
+
+
+        <input class="btn btn-primary" type="submit" value="Ajouter">
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+
+
+<!-- <form class="w-50 mx-auto mb-5 mt-2 user" [formGroup]="FormEnfant" (ngSubmit)="saveEnfant(FormEnfant)">
+
+  <div>
+    <div class="form-group">
+      <label>Nom de l'enfant</label>
+      <input type="text" class="form-control form-control-user" formControlName="nom"  >
+    </div>
+    <br> -->
+    <!-- <div class="alert alert-danger" *ngIf="FormEnfant.controls['nom'].invalid && FormEnfant.controls['nom'].touched">*Nom de l'enfant est obligatoire </div> -->
+  <!-- </div> -->
+
+  <!-- <div>
+    <div class="form-group">
+      <label>Age</label>
+      <input type="number" class="form-control form-control-user" formControlName="age"  >
+    </div>
+    <br>
+    <div class="alert alert-danger" *ngIf="FormEnfant.controls['age'].invalid && FormEnfant.controls['age'].touched">*Age est obligatoire </div>
+  </div> -->
+
+  <!-- <div>
+    <div class="form-group">
+      <label>Prenom de l'enfant</label>
+      <input type="text" class="form-control form-control-user" formControlName="prenom"  >
+    </div>
+    <br> -->
+    <!-- <div class="alert alert-danger" *ngIf="FormEnfant.controls['prenom'].invalid && FormEnfant.controls['prenom'].touched">*Nom de l'enfant est obligatoire </div> -->
+  <!-- </div> -->
+
+  <!-- <div>
+    <div class="form-group">
+      <label>Age de l'enfant</label>
+      <input type="number" class="form-control form-control-user" formControlName="age"  >
+    </div>
+    <br> -->
+    <!-- <div class="alert alert-danger" *ngIf="FormEnfant.controls['age'].invalid && FormEnfant.controls['age'].touched">*Age de l'enfant est obligatoire </div> -->
+  <!-- </div> -->
+
+  <!-- <div>
+    <div class="form-group">
+      <label>Taille de l'enfant</label>
+      <input type="number" class="form-control form-control-user" formControlName="taille"  >
+    </div>
+    <br> -->
+    <!-- <div class="alert alert-danger" *ngIf="FormEnfant.controls['taille'].invalid && FormEnfant.controls['taille'].touched">*Nom de l'enfant est obligatoire </div> -->
+  <!-- </div> -->
+
+  <!-- <br>
+  <div class="form-group">
+    <label >choisir Image</label>
+    <input type="file"
+
+           class="form-control" formControlName="InputImage"
+           accept="images/"
+
+           (change)="uploadFiles($event)">
+    <img [src]="imgURL" height="200" *ngIf="InputImage">
+  </div>
+
+
+
+
+
+  <button class="btn btn-outline-success" type="submit" [disabled]="FormEnfant.invalid" >Valider</button>
+  &nbsp;
+  <button class="btn btn-outline-primary" type="reset" >Reset</button>
+</form> -->
+
+

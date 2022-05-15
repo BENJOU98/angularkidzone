@@ -1,0 +1,44 @@
+<form (ngSubmit)="onSubmit()">
+  <h3>update Jardin</h3>
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputEmail4">nom_jardin</label>
+      <input name="nom_event" [(ngModel)]="jardin.name" type="text" class="form-control" id="inputEmail4" placeholder="nom jardin">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Adresse</label>
+      <input name="'description_event" [(ngModel)]="jardin.adresse" type="inputCity" class="form-control" id="inputPassword4" placeholder="adresse jardin">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Capacite</label>
+      <input name="'description_event" [(ngModel)]="jardin.capacite" type="inputCity" class="form-control" id="inputPassword4" placeholder="capacite jardin">
+    </div>
+    <div class="form-group col-md-6">
+      <label for="inputPassword4">Email</label>
+      <input name="'description_event" [(ngModel)]="jardin.email" type="inputCity" class="form-control" id="inputPassword4" placeholder="email jardin">
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputCity">Responsable Garderie</label>
+        <input name="lieu_event"[(ngModel)]="jardin.responsable_garderie" type="text" class="form-control" id="inputCity" placeholder="Responsable Garderie">
+      </div>
+
+  </div>
+<div class="form-row">
+  <div class="form-group col-md-6">
+    <label for="inputCity2">Upload_image</label>
+    <input type="file" class="form-control" id="inputCity" placeholder="choose lieu_event">
+  </div>
+
+</div>
+  <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" id="gridCheck">
+      <label class="form-check-label" for="gridCheck">
+        Check me out
+      </label>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-success" type="submit">Modify Jardin</button>
+</div>
+</form>

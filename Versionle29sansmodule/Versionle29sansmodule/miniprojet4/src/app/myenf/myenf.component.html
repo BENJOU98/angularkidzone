@@ -1,0 +1,83 @@
+<body id="page-top">
+
+  <!-- Page Wrapper -->
+  <div id="wrapper">
+
+
+
+      <!-- Content Wrapper -->
+      <div id="content-wrapper" class="d-flex flex-column">
+
+          <div id="content">
+
+
+
+              <!-- Begin Page Content -->
+              <div class="container-fluid">
+                <div class="d-sm-flex align-items-center justify-content-between mb-4">
+
+                <!-- Topbar Search -->
+
+
+                    <a href="/AddEnfant" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+                    <i class="fas fa-plus fa-sm text-white-50"></i> Ajouter enfant</a>
+              </div>
+
+
+
+
+                <!-- Main Content -->
+                  <!-- DataTales Example -->
+                  <div class="card shadow mb-4">
+                      <div class="card-body">
+                          <div class="table-responsive">
+                              <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                  <thead>
+
+                                          <th>Nom de l'enfant</th>
+                                          <th>Prenom de l'enfant</th>
+                                          <th>Age de l'enfant<th>
+
+                                          <th>Date de naissance</th>
+                                          <!-- <th>Sexe de l'enfant</th> -->
+                                          <!-- <th>Taille de l'enfant</th> -->
+
+                                          <!-- <th *ngFor="let head of headElements; let i = index" aria-controls="tableSortExample" scope="col" [mdbTableSort]="elements" [sortBy]="headElements[i]">{{ head | titlecase }}
+                                            <mdb-icon fas icon="sort"></mdb-icon>
+                                          </th> -->
+
+
+                                  </thead>
+                                  <tbody>
+                                      <tr *ngFor="let enfant of enfants ">
+                                          <td>{{enfant.nom}}</td>
+                                          <td>{{enfant.prenom}}</td>
+                                          <td>{{enfant.age}}</td>
+                                          <td>{{enfant.dateN | date: 'fullDate'}}</td>
+                                          <!-- <td>{{enfant.sexe}}</td>
+                                          <td>{{enfant.taille}}</td> -->
+                                      </tr>
+                                  </tbody>
+                                  <!-- <ngb-pagination [collectionSize]="totalItems" [pageSize]="itemsPerPage" [(page)]="page" [maxSize]="7" [rotate]="true" (pageChange)="loadPage($event)"></ngb-pagination>
+                                  <ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="items.length"></ngb-pagination>
+                            -->
+                            <!-- <pagination-controls (pageChange)="p = $event"></pagination-controls> -->
+                          </table>
+                          </div>
+                      </div>
+                  </div>
+
+              </div>
+              <!-- /.container-fluid -->
+
+          </div>
+          <!-- End of Main Content -->
+
+
+
+      </div>
+      <!-- End of Content Wrapper -->
+
+  </div>
+  <!-- End of Page Wrapper -->
+</body>
